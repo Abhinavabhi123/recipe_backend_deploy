@@ -2,7 +2,7 @@
 // const fs = require("fs")
 
 
-// require("dotenv").config();
+require("dotenv").config();
 
 // // Connecting with postgresql database with credentials
 // const pool = new Pool({
@@ -18,7 +18,7 @@ const pg = require('pg');
 const createTable = require('./query.js')
 
 
-const conString = "postgres://kppmpnlu:YbmYA386mnSjNpXqUqBymDXox5TK_txf@peanut.db.elephantsql.com/kppmpnlu" //Can be found in the Details page
+const conString =  process.env.DB_URL
 const client = new pg.Client(conString);
 // client.connect();
 
